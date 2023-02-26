@@ -18,6 +18,36 @@
 
 /* =======   COMPONENTS   ====== */
 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
@@ -39,6 +69,7 @@ header,
 .menu-items,
 .header-items {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -80,6 +111,7 @@ header,
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
+  margin-bottom: 72px;
 }
 
 .subtitle {
@@ -102,6 +134,7 @@ header,
   line-height: 1.33;
   color: var(--iris);
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .logo-black {
@@ -113,6 +146,15 @@ header,
 }
 
 /* =======   HEARDER   ====== */
+
+header {
+  display: flex;
+  position: absolute;
+  height: 72px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 
 .menu-link {
   font-size: 16px;
@@ -127,10 +169,24 @@ header,
   border-radius: 2px;
 }
 
+.menu-item:not(:last-child),
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+
 /* =======   HERO   ====== */
 
 .hero {
   background-color: var(--navi-blue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
+
 }
 
 .hero-title {
@@ -138,19 +194,86 @@ header,
   font-size: 56px;
   line-height: 1.07;
   color: var(--white);
-  text-align: center;
+  width: 496px;
+  margin: 0 0 48px 0;
 }
 
 /* =======   BENEFITS   ====== */
 
+.benefits {
+  padding: 120px 0;
+}
 .benefits-title {
   display: none;
+}
+
+.benefits-properties {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits-property:not(:last-child) {
+  margin-right: 24px;
+}
+
+.benefits-property-title {
+  margin-bottom: 8px;
+  width: 264px;
+}
+
+/* =======   ABOUT   ====== */
+
+.about {
+  padding-bottom: 120px;
+}
+
+.about-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+/* =======   TEAM   ====== */
+
+.team {
+  background: var(--could);
+  padding: 120px 0;
+}
+
+.team-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-item {
+  background: var(--white);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.team-photo {
+  margin-bottom: 32px;
+}
+
+.team-name {
+  margin-bottom: 8px;
 }
 
 /* =======   FOOTER  ====== */
 
 footer {
   background-color: var(--navi-blue);
+  padding: 100px 0;
 }
 
 .footer-text {
@@ -162,6 +285,22 @@ footer {
 }
 
 /* ----------------- PORTFOLIO ------------------------ */
+
+
+.portfolio {
+  margin-top: 72px;
+  padding: 69px 0 120px;
+  border-top: 1px solid var(--cornflower);
+}
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-button:not(:last-child) {
+  margin-right: 24px;
+}
 
 .portfolio-btn {
   background-color: var(--could);
