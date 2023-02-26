@@ -1,0 +1,179 @@
+:root {
+  /* colors */
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navi-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --could: #f4f4fd;
+  --navi-blue-modal: ##2e2f42;
+  --grey: #2e2f42;
+  --white: #ffffff;
+
+  /* fonts */
+  --main-font: "Roboto", sans-serif;
+}
+
+/* =======   COMPONENTS   ====== */
+
+.list {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--navi-blue);
+}
+
+header,
+.menu,
+.menu-items,
+.header-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu-link,
+.contacts,
+.button {
+  transition: all 0.3s;
+}
+
+.contacts {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--slate);
+}
+
+.contacts:hover,
+.contacts:focus {
+  color: var(--ocean);
+}
+
+.button {
+  font-size: 16px;
+  color: var(--white);
+  padding: 16px 32px;
+  background-color: var(--iris);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--ocean);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--slate);
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  color: var(--iris);
+  text-transform: uppercase;
+}
+
+.logo-black {
+  color: var(--navi-blue);
+}
+
+.logo-white {
+  color: var(--white);
+}
+
+/* =======   HEARDER   ====== */
+
+.menu-link {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--navi-blue);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--ocean);
+  border-bottom: 4px solid var(--ocean);
+  border-radius: 2px;
+}
+
+/* =======   HERO   ====== */
+
+.hero {
+  background-color: var(--navi-blue);
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  color: var(--white);
+  text-align: center;
+}
+
+/* =======   BENEFITS   ====== */
+
+.benefits-title {
+  display: none;
+}
+
+/* =======   FOOTER  ====== */
+
+footer {
+  background-color: var(--navi-blue);
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--cornflower);
+  width: 264px;
+}
+
+/* ----------------- PORTFOLIO ------------------------ */
+
+.portfolio-btn {
+  background-color: var(--could);
+  border: 1px solid #e7e9fc;
+  color: var(--iris);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 12px 24px;
+  box-shadow: none;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  color: var(--white);
+}
