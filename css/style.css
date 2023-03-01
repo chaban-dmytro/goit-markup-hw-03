@@ -48,13 +48,22 @@ img {
   display: block;
 }
 
-.list {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
   font-style: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
@@ -64,7 +73,17 @@ body {
   color: var(--navi-blue);
 }
 
-header,
+.container {
+  width: 1188px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.header-wrapper,
 .menu,
 .menu-items,
 .header-items {
@@ -165,8 +184,31 @@ header {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--ocean);
-  border-bottom: 4px solid var(--ocean);
+}
+
+.menu-link {
+  position: relative;
+}
+
+.menu-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 4px;
   border-radius: 2px;
+  background-color: var(--ocean);
+  transition: width 0.5s ease-out;
+}
+
+.menu-link:hover::after,
+.menu-link:focus::after {
+  width: 100%;      
+}
+
+.menu-link:focus {
+  outline: transparent;
 }
 
 .menu-item:not(:last-child),
@@ -195,7 +237,8 @@ header {
   line-height: 1.07;
   color: var(--white);
   width: 496px;
-  margin: 0 0 48px 0;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 /* =======   BENEFITS   ====== */
@@ -203,22 +246,20 @@ header {
 .benefits {
   padding: 120px 0;
 }
-.benefits-title {
-  display: none;
-}
 
 .benefits-properties {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
-.benefits-property:not(:last-child) {
-  margin-right: 24px;
+.benefits-property {
+  flex-basis: calc((100% - 72px)/4);
 }
 
 .benefits-property-title {
   margin-bottom: 8px;
-  width: 264px;
 }
 
 /* =======   ABOUT   ====== */
@@ -230,11 +271,10 @@ header {
 .about-items {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
-.about-item:not(:last-child) {
-  margin-right: 24px;
-}
 
 /* =======   TEAM   ====== */
 
@@ -246,6 +286,8 @@ header {
 .team-items {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .team-item {
@@ -255,10 +297,6 @@ header {
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   padding-bottom: 32px;
-}
-
-.team-item:not(:last-child) {
-  margin-right: 24px;
 }
 
 .team-photo {
@@ -284,7 +322,13 @@ footer {
   width: 264px;
 }
 
+
+
+
 /* ----------------- PORTFOLIO ------------------------ */
+
+
+
 
 
 .portfolio {
@@ -296,6 +340,7 @@ footer {
 .portfolio-buttons {
   display: flex;
   justify-content: center;
+  margin-bottom: 72px;
 }
 
 .portfolio-button:not(:last-child) {
@@ -316,3 +361,25 @@ footer {
 .portfolio-btn:focus {
   color: var(--white);
 }
+
+.portfolio-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.portfolio-title {
+  padding: 32px 16px 8px 16px;
+  border-left: 1px solid var(--cornflower);
+  border-right: 1px solid var(--cornflower);
+}
+
+.portfolio-text {
+  margin-bottom: 32px;
+  padding: 0 16px 32px 16px;
+  border-bottom: 1px solid var(--cornflower);
+  border-left: 1px solid var(--cornflower);
+  border-right: 1px solid var(--cornflower);
+}
+
