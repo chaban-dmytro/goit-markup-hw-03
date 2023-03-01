@@ -74,7 +74,7 @@ body {
 }
 
 .container {
-  width: 1188px;
+  width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -153,7 +153,6 @@ body {
   line-height: 1.33;
   color: var(--iris);
   text-transform: uppercase;
-  margin-right: 76px;
 }
 
 .logo-black {
@@ -168,11 +167,14 @@ body {
 
 header {
   display: flex;
-  position: absolute;
   height: 72px;
   top: 0;
   left: 0;
   right: 0;
+}
+
+header .logo {
+  margin-right: 76px;
 }
 
 .menu-link {
@@ -221,13 +223,12 @@ header {
 
 .hero {
   background-color: var(--navi-blue);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-top: 72px;
+  padding: 188px 0;
 
 }
 
@@ -293,7 +294,7 @@ header {
 .team-item {
   background: var(--white);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   padding-bottom: 32px;
@@ -314,6 +315,11 @@ footer {
   padding: 100px 0;
 }
 
+footer .logo {
+  display: block;
+  margin-bottom: 16px;
+}
+
 .footer-text {
   font-weight: 400;
   font-size: 16px;
@@ -324,15 +330,12 @@ footer {
 
 
 
-
 /* ----------------- PORTFOLIO ------------------------ */
 
 
 
 
-
 .portfolio {
-  margin-top: 72px;
   padding: 69px 0 120px;
   border-top: 1px solid var(--cornflower);
 }
@@ -366,20 +369,23 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.portfolio-item {
+  flex-basis: calc((100% - 192px) / 9);
+}
+
+.portfolio-items-wrapper {
+  padding: 32px 16px;
+  border-right: 1px solid var(--cornflower);
+  border-bottom: 1px solid var(--cornflower);
+  border-left: 1px solid var(--cornflower);
 }
 
 .portfolio-title {
-  padding: 32px 16px 8px 16px;
-  border-left: 1px solid var(--cornflower);
-  border-right: 1px solid var(--cornflower);
+  margin-bottom: 8px;
 }
 
-.portfolio-text {
-  margin-bottom: 32px;
-  padding: 0 16px 32px 16px;
-  border-bottom: 1px solid var(--cornflower);
-  border-left: 1px solid var(--cornflower);
-  border-right: 1px solid var(--cornflower);
-}
 
